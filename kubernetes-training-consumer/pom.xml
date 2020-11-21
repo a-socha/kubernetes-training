@@ -17,6 +17,8 @@
 
         <assertj-core.version>3.13.2</assertj-core.version>
         <mockito-kotlin.version>2.2.0</mockito-kotlin.version>
+
+        <dockerfile-maven-plugin.version>1.4.3</dockerfile-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -160,6 +162,15 @@
                 </dependencies>
             </plugin>
 
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>${dockerfile-maven-plugin.version}</version>
+                <configuration>
+                    <repository>asocha/${artifactId}</repository>
+                    <tag>${project.version}</tag>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
