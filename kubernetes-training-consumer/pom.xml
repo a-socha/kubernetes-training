@@ -102,7 +102,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.asocha.kubernetes.training.producer.ProducerApplicationKt</mainClass>
+                    <mainClass>com.asocha.kubernetes.training.consumer.ConsumerApplicationKt</mainClass>
                 </configuration>
                 <executions>
                     <execution>
