@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-training-consumer
+  labels:
+    app: kubernetes-training-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetes-training-consumer
+  template:
+    metadata:
+      labels:
+        app: kubernetes-training-consumer
+    spec:
+      containers:
+        - name: kubernetes-training-consumer
+          image: asocha/kubernetes-training-consumer:0.0.5-SNAPSHOT
+          ports:
+            - containerPort: 8081
