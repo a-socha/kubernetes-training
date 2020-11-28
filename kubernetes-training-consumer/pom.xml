@@ -6,7 +6,7 @@
 
     <groupId>com.asocha</groupId>
     <artifactId>kubernetes-training-consumer</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.7-SNAPSHOT</version>
 
     <properties>
         <kotlin.version>1.4.20</kotlin.version>

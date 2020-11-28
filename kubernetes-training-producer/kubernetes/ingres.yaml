@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: istio
+  name: ingress
+spec:
+  rules:
+    - host: producer.example.com
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: kubernetes-training-producer
+              servicePort: 8081

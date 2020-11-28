@@ -4,6 +4,7 @@ metadata:
   name: kubernetes-training-consumer
   labels:
     app: kubernetes-training-consumer
+    version: v1
 spec:
   replicas: 1
   selector:
@@ -13,9 +14,15 @@ spec:
     metadata:
       labels:
         app: kubernetes-training-consumer
+        version: v1
     spec:
       containers:
         - name: kubernetes-training-consumer
-          image: asocha/kubernetes-training-consumer:0.0.5-SNAPSHOT
+          image: asocha/kubernetes-training-consumer:0.0.7-SNAPSHOT
           ports:
             - containerPort: 8081
+          env:
+            - name: PRODUCER_HOST
+              value: "kubernetes-training-producer"
+            - name: PRODUCER_PORT
+              value: "8081"

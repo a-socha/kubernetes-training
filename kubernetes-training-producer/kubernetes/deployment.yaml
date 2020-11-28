@@ -4,6 +4,7 @@ metadata:
   name: kubernetes-training-producer
   labels:
     app: kubernetes-training-producer
+    version: v1
 spec:
   replicas: 1
   selector:
@@ -13,6 +14,7 @@ spec:
     metadata:
       labels:
         app: kubernetes-training-producer
+        version: v1
     spec:
       containers:
         - name: kubernetes-training-producer

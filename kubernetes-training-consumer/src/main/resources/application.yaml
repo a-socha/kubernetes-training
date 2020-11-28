@@ -1,7 +1,7 @@
 kubernetes-training-producer:
-  host: ${KUBERNETES_TRAINING_PRODUCER_PORT_8081_TCP_ADDR:localhost}
-  port: ${KUBERNETES_TRAINING_PRODUCER_PORT_8081_TCP_PORT:8081}
+  host: ${PRODUCER_HOST:localhost}
+  port: ${PRODUCER_PORT:8081}
 
 random-number-service:
   ribbon:
-    listOfServers: http://${kubernetes-training-producer.host}:${kubernetes-training-producer.port}
+    listOfServers: "kubernetes-training-producer:8081"

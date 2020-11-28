@@ -1,0 +1,10 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: kubernetes-training-producer-destination
+spec:
+  host: kubernetes-training-producer
+  subsets:
+    - name: regular
+      labels:
+        app: kubernetes-training-producer

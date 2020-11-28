@@ -8,5 +8,6 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
+      name: http-web
       port: 8081
       targetPort: 8081
