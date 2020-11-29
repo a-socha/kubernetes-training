@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: kubernetes-training-consumer-route
+spec:
+  hosts:
+    - "kubernetes-training-consumer.com"
+  gateways:
+    - kubernetes-training-consumer-gateway
+  http:
+    - route:
+        - destination:
+            host: kubernetes-training-consumer
+            subset: regular
+          weight: 100
+#      fault:
+#        delay:
+#          percentage:
+#            value: 33
+#          fixedDelay: 3s

@@ -5,9 +5,7 @@ metadata:
 spec:
   selector:
     app: kubernetes-training-consumer
-  type: LoadBalancer
+  type: NodePort
   ports:
-    - protocol: TCP
-      name: http-web
+    - name: http-web
       port: 8080
-      targetPort: 8080
