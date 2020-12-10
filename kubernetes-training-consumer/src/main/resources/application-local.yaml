@@ -5,3 +5,6 @@ kubernetes-training-producer:
 random-number-service:
   ribbon:
     listOfServers: "kubernetes-training-producer:8081"
+
+configmap:
+  property: "I am the local property"
