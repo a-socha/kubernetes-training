@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: kubernetes-training-consumer
-          image: asocha/kubernetes-training-consumer:0.0.7-SNAPSHOT
+          image: asocha/kubernetes-training-consumer:0.0.8-SNAPSHOT
           ports:
             - containerPort: 8081
           env:
