@@ -6,5 +6,9 @@ spring:
   cloud:
     kubernetes:
       config:
+        enabled: true
         name: ${spring.application.name}
         namespace: default
+        sources:
+          - name: kubernetes-training-consumer
+            namespace: default
