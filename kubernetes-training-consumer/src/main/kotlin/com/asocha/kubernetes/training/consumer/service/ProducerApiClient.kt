@@ -10,6 +10,6 @@ interface ProducerApiClient {
     fun getRandomInteger(): Int
 
     @RequestMapping(method = [GET], path = ["version"])
-    fun getVersion(): Int
+    fun getVersion(): String
 
 }
