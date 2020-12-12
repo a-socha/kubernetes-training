@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-training-producer-v2
+  labels:
+    app: kubernetes-training-producer
+    version: v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetes-training-producer
+  template:
+    metadata:
+      labels:
+        app: kubernetes-training-producer
+        version: v2
+    spec:
+      containers:
+        - name: kubernetes-training-producer
+          image: asocha/kubernetes-training-producer:0.0.2-SNAPSHOT
+          ports:
+            - containerPort: 8081
+          env:
+            - name: PRODUCER_VERSION
+              value: v2

@@ -9,8 +9,12 @@ spec:
     - route:
         - destination:
             host: kubernetes-training-producer
-            subset: regular
-          weight: 100
+            subset: v1
+          weight: 80
+        - destination:
+            host: kubernetes-training-producer
+            subset: v2
+          weight: 20
 #      fault:
 #        delay:
 #          percentage:

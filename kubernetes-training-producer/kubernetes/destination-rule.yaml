@@ -5,6 +5,11 @@ metadata:
 spec:
   host: kubernetes-training-producer
   subsets:
-    - name: regular
+    - name: v1
       labels:
         app: kubernetes-training-producer
+        version: v1
+    - name: v2
+      labels:
+        app: kubernetes-training-producer
+        version: v2
