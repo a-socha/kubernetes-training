@@ -2,4 +2,4 @@ server:
   port: 8081
 
 producer:
-  version: ${CONSUMER_VERSION:not_set}
+  version: ${PRODUCER_VERSION:not_set}

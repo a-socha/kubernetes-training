@@ -21,3 +21,6 @@ spec:
           image: asocha/kubernetes-training-producer:0.0.2-SNAPSHOT
           ports:
             - containerPort: 8081
+          env:
+            - name: PRODUCER_VERSION
+              value: v1
